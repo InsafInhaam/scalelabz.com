@@ -13,10 +13,11 @@ jobs:
         uses: actions/checkout@v2
 
       - name: FTP Upload
-        uses: wajatimur/ftp-deploy-action@v2
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: /
-          remote-dir: public_html
+          local-dir: /  # Upload all files from the root of the repository
+          server-dir: public_html/wp-content/themes/codexlab-theme  # Path on FTP server where files should be uploaded
+          protocol: ftps  # Using FTPS for secure file transfer

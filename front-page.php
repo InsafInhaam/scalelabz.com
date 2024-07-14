@@ -71,32 +71,32 @@ get_header();
             <div class="row brand-active">
                 <div class="col-12">
                     <div class="brand-item">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/brand/brand_img01.png" alt="">
+                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/Logo.webp" alt="">
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="brand-item">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/brand/brand_img02.png" alt="">
+                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/instagram.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="brand-item">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/brand/brand_img03.png" alt="">
+                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/DSA-ecommerce-Logo.webp" alt="">
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="brand-item">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/brand/brand_img04.png" alt="">
+                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/b81dc46-852e-6d46-e2fa-f7d38c741e5_Beloved_Holistic_Logo.webp" alt="">
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="brand-item">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/brand/brand_img05.png" alt="">
+                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/64a842e615596fc6585c90db_b2b-rocket-logo-blue-cropped-p-500.png" alt="">
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="brand-item">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/brand/brand_img06.png" alt="">
+                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/8gzcr6RpGStvZFA2qRt4v6.jpg" alt="">
                     </div>
                 </div>
             </div>
