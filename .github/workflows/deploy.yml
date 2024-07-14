@@ -12,6 +12,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Create .ftpignore
+        run: |
+          echo "/lost+found" > .ftpignore
+          echo "/.github" >> .ftpignore
+          echo "/node_modules" >> .ftpignore
+
       - name: FTP Upload
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
@@ -21,3 +27,4 @@ jobs:
           local-dir: /  # Upload all files from the root of the repository
           server-dir: public_html/wp-content/themes/codexlab-theme/  # Path on FTP server where files should be uploaded, must end with /
           protocol: ftps  # Using FTPS for secure file transfer
+          exclude: ".ftpignore"
