@@ -21,10 +21,10 @@ jobs:
       - name: FTP Upload
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./  # Upload all files from the root of the repository
-          server-dir: /public_html/wp-content/themes/codexlab-theme/  # Path on FTP server where files should be uploaded, must end with /
-          protocol: ftps  # Using FTPS for secure file transfer
-          exclude: ".ftpignore"
+          server: ftp://vetoent.com:21
+          username: u763604430.scalelabz.com
+          password: RECY4CgAL$ZGc.C
+          local-dir: /
+          server-dir: /public_html/wp-content/themes/codexlab-theme/
+          protocol: ftp
+          port: 21
