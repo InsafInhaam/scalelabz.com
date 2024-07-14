@@ -301,7 +301,7 @@ get_header();
                             <ul class="list-wrap">
                                 <li>
                                     <div class="icon">
-                                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/select-video.png"
+                                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/DIALOGUE-BOX.png"
                                             alt="">
                                     </div>
                                     <div class="content">
@@ -311,7 +311,7 @@ get_header();
                                 </li>
                                 <li>
                                     <div class="icon">
-                                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/getting-pictures.png"
+                                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/PLAYLIST.png"
                                             alt="">
                                     </div>
                                     <div class="content">
@@ -322,7 +322,7 @@ get_header();
                                 </li>
                                 <li>
                                     <div class="icon">
-                                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/video-trimming.png"
+                                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/FILM-EDITOR.png"
                                             alt="">
                                     </div>
                                     <div class="content">
@@ -334,7 +334,7 @@ get_header();
                                 </li>
                                 <li>
                                     <div class="icon">
-                                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/pigeon.png"
+                                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/4K-FILM.png"
                                             alt="">
                                     </div>
                                     <div class="content">
