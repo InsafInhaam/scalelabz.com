@@ -182,7 +182,7 @@ get_header();
                 <div class="row">
                     <div class="col-lg-4 col-sm-6">
                         <div class="counter-item">
-                            <span class="count odometer" data-count="595"></span>
+                            <span class="count odometer" data-count="595+"></span>
                             <p>Project <span>Completed</span></p>
                         </div>
                     </div>
