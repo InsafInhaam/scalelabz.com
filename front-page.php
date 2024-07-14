@@ -201,7 +201,7 @@ get_header();
                         </div>
                         <div class="services-content-two">
                             <h2 class="title"><a href="services-details.html">Video Editing</a></h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <p>Transform raw footage into polished, professional videos with our expert editing services, tailored to enhance your visual storytelling.</p>
                         </div>
                     </div>
                 </div>
@@ -213,7 +213,8 @@ get_header();
                         </div>
                         <div class="services-content-two">
                             <h2 class="title"><a href="services-details.html">Content Creation</a></h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <p>Craft engaging and compelling content that resonates with your audience, driving engagement and building your brand’s presence.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -225,7 +226,8 @@ get_header();
                         </div>
                         <div class="services-content-two">
                             <h2 class="title"><a href="services-details.html">Social Media Management</a></h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <p>Boost your online presence with strategic social media management, from content planning to audience interaction, ensuring consistent and impactful communication.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -237,7 +239,8 @@ get_header();
                         </div>
                         <div class="services-content-two">
                             <h2 class="title"><a href="services-details.html">Graphic Design</a></h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <p>Create stunning visuals with our graphic design services, bringing your ideas to life through innovative and eye-catching designs.
+                            </p>
                         </div>
                     </div>
                 </div>

@@ -19,7 +19,7 @@
                             </div>
                             <div class="content">
                                 <h4 class="title">Address</h4>
-                                <span>UN82 Dhanmondi Dhaka - 1207</span>
+                                <span>Colombo, Western Province, Sri Lanka</span>
                             </div>
                         </li>
                         <li>
@@ -29,7 +29,7 @@
                             </div>
                             <div class="content">
                                 <h4 class="title">Email</h4>
-                                <a href="mailto:your@email.com">your@email.com</a>
+                                <a href="mailto:contact@scalelabz.com">contact@scalelabz.com</a>
                             </div>
                         </li>
                         <li>
@@ -39,7 +39,7 @@
                             </div>
                             <div class="content">
                                 <h4 class="title">Phone</h4>
-                                <a href="tel:0123456789">+12548789300</a>
+                                <a href="tel:+94761504268">+94 76 150 4268</a>
                             </div>
                         </li>
                     </ul>
@@ -47,7 +47,7 @@
             </div>
             <div class="col-lg-8">
                 <div class="contact-form-wrap">
-                    <form action="#">
+                    <!-- <form action="#">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-grp">
@@ -74,7 +74,9 @@
                             <textarea name="message" placeholder="Write your message here"></textarea>
                         </div>
                         <button type="submit" class="btn">Submit Now <span></span></button>
-                    </form>
+                    </form> -->
+
+                    <?php echo do_shortcode('[contact]')?>
                 </div>
             </div>
         </div>
