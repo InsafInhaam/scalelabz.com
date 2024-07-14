@@ -182,7 +182,7 @@ get_header();
                 <div class="row">
                     <div class="col-lg-4 col-sm-6">
                         <div class="counter-item">
-                            <span class="count odometer" data-count="595+"></span>
+                            <span class="count odometer" data-count="595"></span>
                             <p>Project <span>Completed</span></p>
                         </div>
                     </div>
@@ -301,7 +301,7 @@ get_header();
                             <ul class="list-wrap">
                                 <li>
                                     <div class="icon">
-                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/icon/about_icon01.png"
+                                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/select-video.png"
                                             alt="">
                                     </div>
                                     <div class="content">
@@ -311,7 +311,7 @@ get_header();
                                 </li>
                                 <li>
                                     <div class="icon">
-                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/icon/about_icon02.png"
+                                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/getting-pictures.png"
                                             alt="">
                                     </div>
                                     <div class="content">
@@ -322,7 +322,7 @@ get_header();
                                 </li>
                                 <li>
                                     <div class="icon">
-                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/icon/about_icon03.png"
+                                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/video-trimming.png"
                                             alt="">
                                     </div>
                                     <div class="content">
@@ -334,7 +334,7 @@ get_header();
                                 </li>
                                 <li>
                                     <div class="icon">
-                                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/icon/about_icon03.png"
+                                        <img src="<https://scalelabz.com/wp-content/uploads/2024/07/pigeon.png"
                                             alt="">
                                     </div>
                                     <div class="content">
