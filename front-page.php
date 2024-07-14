@@ -334,7 +334,7 @@ get_header();
                                 </li>
                                 <li>
                                     <div class="icon">
-                                        <img src="<https://scalelabz.com/wp-content/uploads/2024/07/pigeon.png"
+                                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/pigeon.png"
                                             alt="">
                                     </div>
                                     <div class="content">

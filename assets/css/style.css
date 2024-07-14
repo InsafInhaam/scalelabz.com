@@ -4675,9 +4675,15 @@ label {
 	width: 60px;
 	flex: 0 0 60px;
 	margin-right: 23px;
+	border-radius: 50%;
+    background: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .work-list .list-wrap .icon img {
-	border-radius: 50%;
+	/* border-radius: 50%; */
 }
 .work-list .list-wrap .content .title {
 	margin-bottom: 15px;
