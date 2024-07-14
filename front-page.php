@@ -24,8 +24,8 @@ get_header();
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-5">
                     <div class="banner-img-two">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/banner/h2_banner_img.png"
-                            alt="">
+                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/hero-banner-img.png"
+                            alt="ScaleLabz hero banner image">
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-7">
