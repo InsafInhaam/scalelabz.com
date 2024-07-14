@@ -19,5 +19,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: /  # Upload all files from the root of the repository
-          server-dir: public_html/wp-content/themes/codexlab-theme  # Path on FTP server where files should be uploaded
+          server-dir: public_html/wp-content/themes/codexlab-theme/  # Path on FTP server where files should be uploaded, must end with /
           protocol: ftps  # Using FTPS for secure file transfer
