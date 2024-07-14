@@ -24,7 +24,7 @@ jobs:
           server: ftp://vetoent.com:21
           username: u763604430.scalelabz.com
           password: RECY4CgAL$ZGc.C
-          local-dir: /
+          local-dir: ./
           server-dir: /public_html/wp-content/themes/codexlab-theme/
           protocol: ftp
           port: 21
