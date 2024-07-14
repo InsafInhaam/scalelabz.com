@@ -47,7 +47,7 @@
             </div>
             <div class="col-lg-8">
                 <div class="contact-form-wrap">
-                    <!-- <form action="#">
+                    <form action="#">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-grp">
@@ -74,9 +74,9 @@
                             <textarea name="message" placeholder="Write your message here"></textarea>
                         </div>
                         <button type="submit" class="btn">Submit Now <span></span></button>
-                    </form> -->
+                    </form>
 
-                    <?php echo do_shortcode('[contact]')?>
+                    <?php //echo do_shortcode('[contact]')?>
                 </div>
             </div>
         </div>
