@@ -145,22 +145,23 @@ function codexlab_scripts()
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
-    // css files
+
+    // CSS files
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '4.6.0');
     wp_enqueue_style('animate', get_template_directory_uri() . '/assets/css/animate.min.css', array(), '1.0.0');
     wp_enqueue_style('magnific-popup', get_template_directory_uri() . '/assets/css/magnific-popup.css', array(), '1.0.0');
-    wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/css/fontawesome-all.min.css', array(), '5.15.4');
     wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css', array(), '7.4.0');
     wp_enqueue_style('odometer', get_template_directory_uri() . '/assets/css/odometer.css', array(), '0.4.8');
     wp_enqueue_style('slick', get_template_directory_uri() . '/assets/css/slick.css', array(), '1.8.1');
     wp_enqueue_style('default', get_template_directory_uri() . '/assets/css/default.css', array(), '1.0.0');
-    wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.0');
+    wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css', array(), filemtime(get_template_directory() . '/assets/css/style.css'));
     wp_enqueue_style('responsive', get_template_directory_uri() . '/assets/css/responsive.css', array(), '1.0.0');
-    wp_enqueue_style('codexlab-font-awesome', get_template_directory_uri() . '/css/plugins/font-awesome.min.css', array(), _S_VERSION);
 
+    // Enqueue Font Awesome from CDN
+    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css', array(), '5.15.4');
 
-    // javascript files
-    wp_enqueue_script('bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '3.6.0', true);
+    // JavaScript files
+    wp_enqueue_script('bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '4.6.0', true);
     wp_enqueue_script('isotope', get_template_directory_uri() . '/assets/js/isotope.pkgd.min.js', array(), null, true);
     wp_enqueue_script('imagesloaded', get_template_directory_uri() . '/assets/js/imagesloaded.pkgd.min.js', array(), null, true);
     wp_enqueue_script('magnific-popup', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array(), null, true);
@@ -168,16 +169,15 @@ function codexlab_scripts()
     wp_enqueue_script('swiper-bundle', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array(), null, true);
     wp_enqueue_script('appear', get_template_directory_uri() . '/assets/js/jquery.appear.js', array(), null, true);
     wp_enqueue_script('slick', get_template_directory_uri() . '/assets/js/slick.min.js', array(), null, true);
-    wp_enqueue_script('ajax-form', get_template_directory_uri() . '/assets/js/ajax-form.js', array(), null, true);
     wp_enqueue_script('parallax', get_template_directory_uri() . '/assets/js/parallax.min.js', array(), null, true);
     wp_enqueue_script('parallax-scroll', get_template_directory_uri() . '/assets/js/jquery.parallaxScroll.min.js', array(), null, true);
     wp_enqueue_script('tween-max', get_template_directory_uri() . '/assets/js/tween-max.js', array(), null, true);
     wp_enqueue_script('wow', get_template_directory_uri() . '/assets/js/wow.min.js', array(), null, true);
-    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array(), null, true);
-
+    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array(), filemtime(get_template_directory() . '/assets/js/main.js'), true);
 }
 
 add_action('wp_enqueue_scripts', 'codexlab_scripts');
+
 
 /**
  * Implement the Custom Header feature.
@@ -555,7 +555,8 @@ function custom_login_logo()
 add_action('login_enqueue_scripts', 'custom_login_logo');
 
 
-function create_portfolio_cpt() {
+function create_portfolio_cpt()
+{
     $labels = array(
         'name' => _x('Portfolios', 'Post Type General Name', 'scalelabz.com'),
         'singular_name' => _x('Portfolio', 'Post Type Singular Name', 'scalelabz.com'),
@@ -608,7 +609,8 @@ function create_portfolio_cpt() {
 add_action('init', 'create_portfolio_cpt', 0);
 
 
-function add_portfolio_metaboxes() {
+function add_portfolio_metaboxes()
+{
     add_meta_box(
         'portfolio_video_url',
         __('Portfolio Video URL', 'scalelabz.com'),
@@ -620,14 +622,16 @@ function add_portfolio_metaboxes() {
 }
 add_action('add_meta_boxes', 'add_portfolio_metaboxes');
 
-function portfolio_video_url_callback($post) {
+function portfolio_video_url_callback($post)
+{
     wp_nonce_field(basename(__FILE__), 'portfolio_video_nonce');
     $portfolio_video_url = get_post_meta($post->ID, 'portfolio_video_url', true);
     echo '<label for="portfolio_video_url">' . __('Video URL', 'scalelabz.com') . '</label>';
     echo '<input type="text" name="portfolio_video_url" value="' . esc_attr($portfolio_video_url) . '" size="50">';
 }
 
-function save_portfolio_video_url($post_id) {
+function save_portfolio_video_url($post_id)
+{
     if (!isset($_POST['portfolio_video_nonce']) || !wp_verify_nonce($_POST['portfolio_video_nonce'], basename(__FILE__))) {
         return $post_id;
     }
