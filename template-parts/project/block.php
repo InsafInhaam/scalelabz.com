@@ -25,7 +25,7 @@
     }
 </style>
 
-<section class="project-area-three" id="portfolio">
+<section class="project-asrea-three" id="portfolio">
     <div class="container">
         <div class="row justify-content-end">
             <div class="col-xl-10">
@@ -39,7 +39,8 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="website" role="tabpanel" aria-labelledby="website-tab">
+                        <div class="tab-pane fade show active" id="website" role="tabpanel"
+                            aria-labelledby="website-tab">
                             <div class="project-items-wrap">
                                 <?php
                                 $args = array(
@@ -55,15 +56,18 @@
                                         ?>
                                         <div class="project-item-three">
                                             <div class="project-content-three">
-                                                <h2 class="title"><?php echo esc_html($portfolio_title); ?></h2>
+                                                <h2 class="title">
+                                                    <?php echo esc_html($portfolio_title); ?>
+                                                </h2>
                                             </div>
                                             <div class="project-thumb-three">
                                                 <?php if ($portfolio_video_url): ?>
                                                     <a data-fancybox="gallery" href="<?php echo esc_url($portfolio_video_url); ?>">
-                                                        <img src="https://drive.google.com/thumbnail?id=<?php echo esc_attr(parse_url($portfolio_video_url, PHP_URL_QUERY)); ?>" alt="<?php echo esc_attr($portfolio_title); ?>">
+                                                        <img src="https://img.youtube.com/vi/<?php echo esc_attr(parse_url($portfolio_video_url, PHP_URL_QUERY)); ?>/0.jpg" alt="<?php echo esc_attr($portfolio_title); ?>">
                                                     </a>
                                                 <?php else: ?>
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/project/h3_project_img01.jpg" alt="">
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/project/h3_project_img01.jpg"
+                                                        alt="">
                                                 <?php endif; ?>
                                             </div>
                                         </div>
@@ -81,7 +85,9 @@
                 </div>
                 <div class="col-xl-12">
                     <div class="more-videos-btn">
-                        <a href="<?php echo esc_url(home_url('/projects')); ?>" class="btn"><?php _e('More Videos', 'scalelabz.com'); ?></a>
+                        <a href="<?php echo esc_url(home_url('/projects')); ?>" class="btn">
+                            <?php _e('More Videos', 'scalelabz.com'); ?>
+                        </a>
                     </div>
                 </div>
             </div>

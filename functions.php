@@ -237,7 +237,7 @@ function custom_portfolio_post_type()
         'has_archive' => true,
         'hierarchical' => false,
         'menu_position' => null,
-        'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+        'supports' => array('title'),
         'taxonomies' => array('portfolio_category') // Add custom taxonomy here
     );
 
@@ -274,6 +274,92 @@ function custom_portfolio_taxonomy()
     register_taxonomy('portfolio_category', array('portfolio'), $args);
 }
 add_action('init', 'custom_portfolio_taxonomy');
+
+// function create_portfolio_cpt()
+// {
+//     $labels = array(
+//         'name' => _x('Portfolios', 'Post Type General Name', 'scalelabz.com'),
+//         'singular_name' => _x('Portfolio', 'Post Type Singular Name', 'scalelabz.com'),
+//         'menu_name' => __('Portfolios', 'scalelabz.com'),
+//         'name_admin_bar' => __('Portfolio', 'scalelabz.com'),
+//         'archives' => __('Portfolio Archives', 'scalelabz.com'),
+//         'attributes' => __('Portfolio Attributes', 'scalelabz.com'),
+//         'parent_item_colon' => __('Parent Portfolio:', 'scalelabz.com'),
+//         'all_items' => __('All Portfolios', 'scalelabz.com'),
+//         'add_new_item' => __('Add New Portfolio', 'scalelabz.com'),
+//         'add_new' => __('Add New', 'scalelabz.com'),
+//         'new_item' => __('New Portfolio', 'scalelabz.com'),
+//         'edit_item' => __('Edit Portfolio', 'scalelabz.com'),
+//         'update_item' => __('Update Portfolio', 'scalelabz.com'),
+//         'view_item' => __('View Portfolio', 'scalelabz.com'),
+//         'view_items' => __('View Portfolios', 'scalelabz.com'),
+//         'search_items' => __('Search Portfolio', 'scalelabz.com'),
+//         'not_found' => __('Not found', 'scalelabz.com'),
+//         'not_found_in_trash' => __('Not found in Trash', 'scalelabz.com'),
+//         'featured_image' => __('Featured Image', 'scalelabz.com'),
+//         'set_featured_image' => __('Set featured image', 'scalelabz.com'),
+//         'remove_featured_image' => __('Remove featured image', 'scalelabz.com'),
+//         'use_featured_image' => __('Use as featured image', 'scalelabz.com'),
+//         'insert_into_item' => __('Insert into portfolio', 'scalelabz.com'),
+//         'uploaded_to_this_item' => __('Uploaded to this portfolio', 'scalelabz.com'),
+//         'items_list' => __('Portfolios list', 'scalelabz.com'),
+//         'items_list_navigation' => __('Portfolios list navigation', 'scalelabz.com'),
+//         'filter_items_list' => __('Filter portfolios list', 'scalelabz.com'),
+//     );
+//     $args = array(
+//         'label' => __('Portfolio', 'scalelabz.com'),
+//         'description' => __('Post Type Description', 'scalelabz.com'),
+//         'labels' => $labels,
+//         'supports' => array('title', 'editor', 'thumbnail'),
+//         'hierarchical' => false,
+//         'public' => true,
+//         'show_ui' => true,
+//         'show_in_menu' => true,
+//         'menu_position' => 5,
+//         'show_in_admin_bar' => true,
+//         'show_in_nav_menus' => true,
+//         'can_export' => true,
+//         'has_archive' => false,
+//         'exclude_from_search' => false,
+//         'publicly_queryable' => true,
+//         'capability_type' => 'post',
+//     );
+//     register_post_type('portfolio', $args);
+// }
+// add_action('init', 'create_portfolio_cpt', 0);
+
+// function add_portfolio_metaboxes()
+// {
+//     add_meta_box(
+//         'portfolio_video_url',
+//         __('Portfolio Video URL', 'scalelabz.com'),
+//         'portfolio_video_url_callback',
+//         'portfolio',
+//         'normal',
+//         'high'
+//     );
+// }
+// add_action('add_meta_boxes', 'add_portfolio_metaboxes');
+
+// function portfolio_video_url_callback($post)
+// {
+//     wp_nonce_field(basename(__FILE__), 'portfolio_video_nonce');
+//     $portfolio_video_url = get_post_meta($post->ID, 'portfolio_video_url', true);
+//     echo '<label for="portfolio_video_url">' . __('Video URL', 'scalelabz.com') . '</label>';
+//     echo '<input type="text" name="portfolio_video_url" value="' . esc_attr($portfolio_video_url) . '" size="50">';
+// }
+
+// function save_portfolio_video_url($post_id)
+// {
+//     if (!isset($_POST['portfolio_video_nonce']) || !wp_verify_nonce($_POST['portfolio_video_nonce'], basename(__FILE__))) {
+//         return $post_id;
+//     }
+//     $portfolio_video_url = sanitize_text_field($_POST['portfolio_video_url']);
+//     update_post_meta($post_id, 'portfolio_video_url', $portfolio_video_url);
+// }
+// add_action('save_post', 'save_portfolio_video_url');
+
+
 
 
 // Add custom section and settings to the Customizer
@@ -555,93 +641,9 @@ function custom_login_logo()
 add_action('login_enqueue_scripts', 'custom_login_logo');
 
 
-function create_portfolio_cpt()
-{
-    $labels = array(
-        'name' => _x('Portfolios', 'Post Type General Name', 'scalelabz.com'),
-        'singular_name' => _x('Portfolio', 'Post Type Singular Name', 'scalelabz.com'),
-        'menu_name' => __('Portfolios', 'scalelabz.com'),
-        'name_admin_bar' => __('Portfolio', 'scalelabz.com'),
-        'archives' => __('Portfolio Archives', 'scalelabz.com'),
-        'attributes' => __('Portfolio Attributes', 'scalelabz.com'),
-        'parent_item_colon' => __('Parent Portfolio:', 'scalelabz.com'),
-        'all_items' => __('All Portfolios', 'scalelabz.com'),
-        'add_new_item' => __('Add New Portfolio', 'scalelabz.com'),
-        'add_new' => __('Add New', 'scalelabz.com'),
-        'new_item' => __('New Portfolio', 'scalelabz.com'),
-        'edit_item' => __('Edit Portfolio', 'scalelabz.com'),
-        'update_item' => __('Update Portfolio', 'scalelabz.com'),
-        'view_item' => __('View Portfolio', 'scalelabz.com'),
-        'view_items' => __('View Portfolios', 'scalelabz.com'),
-        'search_items' => __('Search Portfolio', 'scalelabz.com'),
-        'not_found' => __('Not found', 'scalelabz.com'),
-        'not_found_in_trash' => __('Not found in Trash', 'scalelabz.com'),
-        'featured_image' => __('Featured Image', 'scalelabz.com'),
-        'set_featured_image' => __('Set featured image', 'scalelabz.com'),
-        'remove_featured_image' => __('Remove featured image', 'scalelabz.com'),
-        'use_featured_image' => __('Use as featured image', 'scalelabz.com'),
-        'insert_into_item' => __('Insert into portfolio', 'scalelabz.com'),
-        'uploaded_to_this_item' => __('Uploaded to this portfolio', 'scalelabz.com'),
-        'items_list' => __('Portfolios list', 'scalelabz.com'),
-        'items_list_navigation' => __('Portfolios list navigation', 'scalelabz.com'),
-        'filter_items_list' => __('Filter portfolios list', 'scalelabz.com'),
-    );
-    $args = array(
-        'label' => __('Portfolio', 'scalelabz.com'),
-        'description' => __('Post Type Description', 'scalelabz.com'),
-        'labels' => $labels,
-        'supports' => array('title', 'editor', 'thumbnail'),
-        'hierarchical' => false,
-        'public' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'menu_position' => 5,
-        'show_in_admin_bar' => true,
-        'show_in_nav_menus' => true,
-        'can_export' => true,
-        'has_archive' => false,
-        'exclude_from_search' => false,
-        'publicly_queryable' => true,
-        'capability_type' => 'post',
-    );
-    register_post_type('portfolio', $args);
-}
-add_action('init', 'create_portfolio_cpt', 0);
 
 
-function add_portfolio_metaboxes()
-{
-    add_meta_box(
-        'portfolio_video_url',
-        __('Portfolio Video URL', 'scalelabz.com'),
-        'portfolio_video_url_callback',
-        'portfolio',
-        'normal',
-        'high'
-    );
-}
-add_action('add_meta_boxes', 'add_portfolio_metaboxes');
-
-function portfolio_video_url_callback($post)
-{
-    wp_nonce_field(basename(__FILE__), 'portfolio_video_nonce');
-    $portfolio_video_url = get_post_meta($post->ID, 'portfolio_video_url', true);
-    echo '<label for="portfolio_video_url">' . __('Video URL', 'scalelabz.com') . '</label>';
-    echo '<input type="text" name="portfolio_video_url" value="' . esc_attr($portfolio_video_url) . '" size="50">';
-}
-
-function save_portfolio_video_url($post_id)
-{
-    if (!isset($_POST['portfolio_video_nonce']) || !wp_verify_nonce($_POST['portfolio_video_nonce'], basename(__FILE__))) {
-        return $post_id;
-    }
-    $portfolio_video_url = sanitize_text_field($_POST['portfolio_video_url']);
-    update_post_meta($post_id, 'portfolio_video_url', $portfolio_video_url);
-}
-add_action('save_post', 'save_portfolio_video_url');
-
-
-
+// fancybox 
 function enqueue_fancybox() {
     wp_enqueue_style('fancybox-css', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css');
     wp_enqueue_script('fancybox-js', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js', array('jquery'), null, true);
