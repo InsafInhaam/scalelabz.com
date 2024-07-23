@@ -639,3 +639,11 @@ function save_portfolio_video_url($post_id)
     update_post_meta($post_id, 'portfolio_video_url', $portfolio_video_url);
 }
 add_action('save_post', 'save_portfolio_video_url');
+
+
+
+function enqueue_fancybox() {
+    wp_enqueue_style('fancybox-css', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css');
+    wp_enqueue_script('fancybox-js', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js', array('jquery'), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_fancybox');

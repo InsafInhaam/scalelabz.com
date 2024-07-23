@@ -25,7 +25,7 @@
     }
 </style>
 
-<section class="project-area-three" id="portfolio">
+<section class="project-asrea-three" id="portfolio">
     <div class="container">
         <div class="row justify-content-end">
             <div class="col-xl-10">
@@ -52,7 +52,6 @@
                                     while ($portfolio_query->have_posts()):
                                         $portfolio_query->the_post();
                                         $portfolio_title = get_the_title();
-                                        $portfolio_content = get_the_content();
                                         $portfolio_video_url = get_post_meta(get_the_ID(), 'portfolio_video_url', true);
                                         ?>
                                         <div class="project-item-three">
@@ -60,12 +59,12 @@
                                                 <h2 class="title">
                                                     <?php echo esc_html($portfolio_title); ?>
                                                 </h2>
-                                                <p><?php echo esc_html($portfolio_content); ?></p>
                                             </div>
                                             <div class="project-thumb-three">
                                                 <?php if ($portfolio_video_url): ?>
-                                                    <iframe src="<?php echo esc_url($portfolio_video_url); ?>" width="640"
-                                                        height="480" allow="autoplay"></iframe>
+                                                    <a data-fancybox="gallery" href="<?php echo esc_url($portfolio_video_url); ?>">
+                                                        <img src="https://img.youtube.com/vi/<?php echo esc_attr(parse_url($portfolio_video_url, PHP_URL_QUERY)); ?>/0.jpg" alt="<?php echo esc_attr($portfolio_title); ?>">
+                                                    </a>
                                                 <?php else: ?>
                                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/project/h3_project_img01.jpg"
                                                         alt="">
@@ -98,3 +97,21 @@
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/images/h3_project_shape.png" alt="">
     </div>
 </section>
+
+<script>
+    jQuery(document).ready(function($) {
+        $('[data-fancybox="gallery"]').fancybox({
+            buttons : [ 
+                'slideShow',
+                'share',
+                'zoom',
+                'fullScreen',
+                'close'
+            ],
+            youtube : {
+                controls : 0,
+                showinfo : 0
+            }
+        });
+    });
+</script>
