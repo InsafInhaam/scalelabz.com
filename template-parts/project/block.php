@@ -52,18 +52,20 @@
                                     while ($portfolio_query->have_posts()):
                                         $portfolio_query->the_post();
                                         $portfolio_title = get_the_title();
-                                        $portfolio_video_url = get_post_meta(get_the_ID(), 'portfolio_video_url', true);
+                                        $portfolio_video_url = get_field('video_url');
+                                        $portfolio_thumbnail = get_field('video_thumbnail');
+                                        $portfolio_description = get_field('video_description');
                                         ?>
                                         <div class="project-item-three">
                                             <div class="project-content-three">
-                                                <h2 class="title">
-                                                    <?php echo esc_html($portfolio_title); ?>
-                                                </h2>
+                                                <h2 class="title"><?php echo esc_html($portfolio_title); ?></h2>
+                                                <p><?php echo esc_html($portfolio_description); ?></p>
                                             </div>
                                             <div class="project-thumb-three">
                                                 <?php if ($portfolio_video_url): ?>
                                                     <a data-fancybox="gallery" href="<?php echo esc_url($portfolio_video_url); ?>">
-                                                        <img src="https://img.youtube.com/vi/<?php echo esc_attr(parse_url($portfolio_video_url, PHP_URL_QUERY)); ?>/0.jpg" alt="<?php echo esc_attr($portfolio_title); ?>">
+                                                        <img src="<?php echo esc_url($portfolio_thumbnail['url']); ?>"
+                                                            alt="<?php echo esc_attr($portfolio_title); ?>">
                                                     </a>
                                                 <?php else: ?>
                                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/project/h3_project_img01.jpg"
@@ -99,18 +101,18 @@
 </section>
 
 <script>
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function ($) {
         $('[data-fancybox="gallery"]').fancybox({
-            buttons : [ 
+            buttons: [
                 'slideShow',
                 'share',
                 'zoom',
                 'fullScreen',
                 'close'
             ],
-            youtube : {
-                controls : 0,
-                showinfo : 0
+            youtube: {
+                controls: 0,
+                showinfo: 0
             }
         });
     });
