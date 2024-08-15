@@ -13,8 +13,8 @@
     }
 
     .project-area-three .project-item-three {
-        width: 33.3333%;
-        float: left;
+        /* width: 33.3333%; */
+        /* float: left; */
         box-sizing: border-box;
         padding: 30px 30px 0px;
     }
@@ -22,6 +22,17 @@
     .project-area-three .more-videos-btn {
         text-align: center;
         margin-top: 30px;
+    }
+
+    .project-items-wrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .project-item-three {
+        width: 32%;
+        margin: 0 10px;
     }
 </style>
 
