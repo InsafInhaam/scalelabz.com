@@ -3584,10 +3584,20 @@ label {
 .project-tab-wrap .nav-tabs .nav-link.active::before {
 	opacity: 1;
 }
+
+.project-items-wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
 .project-item-three {
 	background: var(--tg-black-two);
 	border-radius: 20px;
-	padding: 44px 44px 52px;
+	padding: 20px;
+    width: 31%;
+    margin: 0 5px;
 }
 .project-content-three .title {
 	margin-bottom: 12px;
