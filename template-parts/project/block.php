@@ -1,4 +1,8 @@
 <style>
+    .project-asrea-three{
+        padding: 110px 0px;
+    }
+
     .project-area-three .row {
         flex-wrap: wrap !important;
     }
@@ -19,7 +23,7 @@
         padding: 30px 30px 0px;
     }
 
-    .project-area-three .more-videos-btn {
+    .more-videos-btn {
         text-align: center;
         margin-top: 30px;
     }
@@ -30,10 +34,10 @@
         justify-content: flex-start;
     }
 
-    .project-item-three {
+    /* .project-item-three {
         width: 32%;
         margin: 0 10px;
-    }
+    } */
 </style>
 
 <section class="project-asrea-three" id="portfolio">
