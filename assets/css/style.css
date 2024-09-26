@@ -3588,7 +3588,7 @@ label {
 .project-items-wrap {
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -3597,7 +3597,7 @@ label {
 	border-radius: 20px;
 	padding: 20px;
     width: 31%;
-    margin: 0 5px;
+    margin: 0 10px;
 }
 .project-content-three .title {
 	margin-bottom: 12px;
