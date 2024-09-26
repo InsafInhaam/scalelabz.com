@@ -427,7 +427,7 @@ label {
 	height: auto;
 }
 .menu-area {
-	padding: 7px 0;
+	padding: 0 !important;
 }
 .menu-nav {
 	display: flex;
@@ -573,7 +573,7 @@ label {
 	border-radius: 0;
 }
 .sticky-menu.menu-area {
-	padding: 0 0;
+	padding: 0 0 !important;
 }
 .sticky-menu .navbar-wrap ul li .sub-menu {
     border-radius: 0 0 15px 15px;
@@ -3595,10 +3595,23 @@ label {
 .project-item-three {
 	background: var(--tg-black-two);
 	border-radius: 20px;
-	padding: 20px;
+	padding: 20px !important;
     width: 31%;
-    margin: 0 10px;
+    margin: 10px;
 }
+
+@media(max-width: 991px){
+	.project-item-three{
+		width: 47%;
+	}
+}
+
+@media(max-width: 767px){
+	.project-item-three{
+		width: 100%;
+	}
+}
+
 .project-content-three .title {
 	margin-bottom: 12px;
 	font-size: 24px;
