@@ -46,18 +46,21 @@
 			<i class="fas fa-angle-up"></i>
 		</button>
 		<!-- Scroll-top-end-->
-
+		<style>
+			@media(max-width:)
+		</style>
 		<!-- header-area -->
 		<header>
 			<div id="sticky-header" class="menu-area menu-style-two transparent-header">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
-							<div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
 							<div class="menu-wrap">
 								<nav class="menu-nav">
 									<div class="logo">
-										<a href="index.html"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/bg-logo.png" alt="Logo"></a>
+										<a href="index.html"><img
+												src="<?php echo get_template_directory_uri() ?>/assets/img/logo/bg-logo.png"
+												alt="Logo"></a>
 									</div>
 									<div class="navbar-wrap main-menu d-none d-lg-flex">
 										<ul class="navigation">
@@ -76,6 +79,7 @@
 										</ul>
 									</div>
 								</nav>
+								<div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
 							</div>
 
 							<!-- Mobile Menu  -->
@@ -83,7 +87,9 @@
 								<nav class="menu-box">
 									<div class="close-btn"><i class="fas fa-times"></i></div>
 									<div class="nav-logo">
-										<a href="index.html"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo.png" alt="Logo"></a>
+										<a href="index.html"><img
+												src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo.png"
+												alt="Logo"></a>
 									</div>
 									<div class="menu-outer">
 										<!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->

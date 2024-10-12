@@ -1,3 +1,42 @@
+<?php
+/**
+ * The template for displaying all pages
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package codexlab
+ */
+
+get_header();
+?>
+
+
+<!-- banner -->
+<div class="mil-inner-banner">
+    <div class="mil-banner-content mil-up">
+        <div class="mil-animation-frame">
+            <div class="mil-animation mil-position-4 mil-dark mil-scale" data-value-1="6" data-value-2="1.4"></div>
+        </div>
+        <div class="container">
+            <ul class="mil-breadcrumbs mil-mb-60">
+                <li><a href="/">Homepage</a></li>
+                <li><a href="/portfolios">Portfolio</a></li>
+            </ul>
+            <h1 class="mil-mb-60">Designing a <br> Better <span class="mil-thin">World Today</span></h1>
+            <a href="#portfolio" class="mil-link mil-dark mil-arrow-place mil-down-arrow">
+                <span>Our works</span>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- banner end -->
+
+<!-- portfolio -->
 <style>
     .project-asrea-three{
         padding: 110px 0px;
@@ -132,3 +171,13 @@
         });
     });
 </script>
+
+<!-- portfolio end -->
+
+<?php
+include get_template_directory() . '/template-parts/call-to-action.php';
+?>
+
+
+<?php
+get_footer();
