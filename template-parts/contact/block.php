@@ -1,3 +1,39 @@
+<?php
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     // Retrieve and sanitize the form data
+//     $name = htmlspecialchars(trim($_POST['name']));
+//     $email = htmlspecialchars(trim($_POST['email']));
+//     $number = htmlspecialchars(trim($_POST['number']));
+//     $subject = htmlspecialchars(trim($_POST['subject']));
+//     $message = htmlspecialchars(trim($_POST['message']));
+
+//     // Validation: Ensure that required fields are not empty
+//     if (!empty($name) && !empty($email) && !empty($message)) {
+
+//         // Email setup
+//         $to = "insafinhaam732@gmail.com"; // Change this to your email
+//         $subject = "New Contact Form Submission: " . $subject;
+//         $body = "You have received a new message from the contact form on your website.\n\n";
+//         $body .= "Name: $name\n";
+//         $body .= "Email: $email\n";
+//         $body .= "Phone Number: $number\n";
+//         $body .= "Subject: $subject\n\n";
+//         $body .= "Message:\n$message\n";
+
+//         $headers = "From: $email";
+
+//         // Send email
+//         if (mail($to, $subject, $body, $headers)) {
+//             echo "<p>Thank you! Your message has been sent.</p>";
+//         } else {
+//             echo "<p>Sorry, there was an error sending your message. Please try again later.</p>";
+//         }
+//     } else {
+//         echo "<p>Please fill out all required fields.</p>";
+//     }
+// }
+?>
+
 <section class="contact-area" id="contact-us">
     <div class="container">
         <div class="row justify-content-center">
@@ -47,36 +83,35 @@
             </div>
             <div class="col-lg-8">
                 <div class="contact-form-wrap">
-                    <form action="#">
+                    <?php echo do_shortcode('[contact-form-7 id="a27d4bb" title="Contact form 1"]'); ?>
+                    <!-- <form action="" method="POST">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-grp">
-                                    <input type="text" placeholder="Name">
+                                    <input type="text" name="name" placeholder="Name" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-grp">
-                                    <input type="email" placeholder="Email">
+                                    <input type="email" name="email" placeholder="Email" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-grp">
-                                    <input type="text" placeholder="Your Number">
+                                    <input type="text" name="number" placeholder="Your Number">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-grp">
-                                    <input type="text" placeholder="Subject">
+                                    <input type="text" name="subject" placeholder="Subject">
                                 </div>
                             </div>
                         </div>
                         <div class="form-grp">
-                            <textarea name="message" placeholder="Write your message here"></textarea>
+                            <textarea name="message" placeholder="Write your message here" required></textarea>
                         </div>
                         <button type="submit" class="btn">Submit Now <span></span></button>
-                    </form>
-
-                    <?php //echo do_shortcode('[contact]')?>
+                    </form> -->
                 </div>
             </div>
         </div>

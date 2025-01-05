@@ -47,7 +47,21 @@
 		</button>
 		<!-- Scroll-top-end-->
 		<style>
-			@media(max-width:)
+			@media screen and (max-width:991px) {
+				.menu-wrap {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+				}
+
+				.header-action {
+					display: none;
+				}
+
+				.logo img {
+					max-width: 90px;
+				}
+			}
 		</style>
 		<!-- header-area -->
 		<header>
@@ -58,18 +72,17 @@
 							<div class="menu-wrap">
 								<nav class="menu-nav">
 									<div class="logo">
-										<a href="index.html"><img
-												src="<?php echo get_template_directory_uri() ?>/assets/img/logo/bg-logo.png"
+										<a href="<?php echo site_url(); ?>"><img
+												src="https://scalelabz.com/wp-content/uploads/2024/04/cropped-bg-logo.png"
 												alt="Logo"></a>
 									</div>
 									<div class="navbar-wrap main-menu d-none d-lg-flex">
 										<ul class="navigation">
-											<li class="active "><a href="#">Home</a>
-
+											<li class="active "><a href="<?php echo site_url(); ?>">Home</a>
 											</li>
-											<li><a href="#about-us">About Us</a></li>
-											<li><a href="#portfolio">Portfolio</a></li>
-											<li><a href="#testimonials">Testimonials</a></li>
+											<li><a href="<?php echo site_url(); ?>#about-us">About Us</a></li>
+											<li><a href="<?php echo site_url(); ?>#portfolio">Portfolio</a></li>
+											<li><a href="<?php echo site_url(); ?>#testimonials">Testimonials</a></li>
 										</ul>
 									</div>
 									<div class="header-action">
@@ -87,8 +100,8 @@
 								<nav class="menu-box">
 									<div class="close-btn"><i class="fas fa-times"></i></div>
 									<div class="nav-logo">
-										<a href="index.html"><img
-												src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo.png"
+										<a href="<?php echo site_url(); ?>"><img
+												src="https://scalelabz.com/wp-content/uploads/2024/04/cropped-bg-logo.png"
 												alt="Logo"></a>
 									</div>
 									<div class="menu-outer">

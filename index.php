@@ -37,6 +37,8 @@ get_header();
 	</div>
 	<!-- banner end -->
 
+	<h1>hello testing ur the cnjen</h1>
+
 	<!-- blog -->
 	<section id="blog">
 		<div class="container mil-p-120-120">

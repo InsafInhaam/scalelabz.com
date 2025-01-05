@@ -275,6 +275,8 @@ function custom_portfolio_taxonomy()
 }
 add_action('init', 'custom_portfolio_taxonomy');
 
+
+
 // function create_portfolio_cpt()
 // {
 //     $labels = array(
@@ -483,45 +485,45 @@ function custom_theme_settings($wp_customize)
 add_action('customize_register', 'custom_theme_settings');
 
 // patners custom post type
-function register_partner_post_type()
-{
-    $labels = array(
-        'name' => __('Partners', 'scalelabz.com'),
-        'singular_name' => __('Partner', 'scalelabz.com'),
-        'menu_name' => __('Partners', 'scalelabz.com'),
-        'name_admin_bar' => __('Partner', 'scalelabz.com'),
-        'add_new' => __('Add New', 'scalelabz.com'),
-        'add_new_item' => __('Add New Partner', 'scalelabz.com'),
-        'new_item' => __('New Partner', 'scalelabz.com'),
-        'edit_item' => __('Edit Partner', 'scalelabz.com'),
-        'view_item' => __('View Partner', 'scalelabz.com'),
-        'all_items' => __('All Partners', 'scalelabz.com'),
-        'search_items' => __('Search Partners', 'scalelabz.com'),
-        'parent_item_colon' => __('Parent Partners:', 'scalelabz.com'),
-        'not_found' => __('No partners found.', 'scalelabz.com'),
-        'not_found_in_trash' => __('No partners found in Trash.', 'scalelabz.com')
-    );
+// function register_partner_post_type()
+// {
+//     $labels = array(
+//         'name' => __('Partners', 'scalelabz.com'),
+//         'singular_name' => __('Partner', 'scalelabz.com'),
+//         'menu_name' => __('Partners', 'scalelabz.com'),
+//         'name_admin_bar' => __('Partner', 'scalelabz.com'),
+//         'add_new' => __('Add New', 'scalelabz.com'),
+//         'add_new_item' => __('Add New Partner', 'scalelabz.com'),
+//         'new_item' => __('New Partner', 'scalelabz.com'),
+//         'edit_item' => __('Edit Partner', 'scalelabz.com'),
+//         'view_item' => __('View Partner', 'scalelabz.com'),
+//         'all_items' => __('All Partners', 'scalelabz.com'),
+//         'search_items' => __('Search Partners', 'scalelabz.com'),
+//         'parent_item_colon' => __('Parent Partners:', 'scalelabz.com'),
+//         'not_found' => __('No partners found.', 'scalelabz.com'),
+//         'not_found_in_trash' => __('No partners found in Trash.', 'scalelabz.com')
+//     );
 
-    $args = array(
-        'labels' => $labels,
-        'description' => __('Description.', 'scalelabz.com'),
-        'public' => true,
-        'publicly_queryable' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'query_var' => true,
-        'rewrite' => array('slug' => 'partner'),
-        'capability_type' => 'post',
-        'has_archive' => true,
-        'hierarchical' => false,
-        'menu_position' => null,
-        'supports' => array('title', 'thumbnail'), // Adjust as needed
-        'menu_icon' => 'dashicons-businessman', // Adjust as needed
-    );
+//     $args = array(
+//         'labels' => $labels,
+//         'description' => __('Description.', 'scalelabz.com'),
+//         'public' => true,
+//         'publicly_queryable' => true,
+//         'show_ui' => true,
+//         'show_in_menu' => true,
+//         'query_var' => true,
+//         'rewrite' => array('slug' => 'partner'),
+//         'capability_type' => 'post',
+//         'has_archive' => true,
+//         'hierarchical' => false,
+//         'menu_position' => null,
+//         'supports' => array('title', 'thumbnail'), // Adjust as needed
+//         'menu_icon' => 'dashicons-businessman', // Adjust as needed
+//     );
 
-    register_post_type('partner', $args);
-}
-add_action('init', 'register_partner_post_type');
+//     register_post_type('partner', $args);
+// }
+// add_action('init', 'register_partner_post_type');
 
 // reviews custom post type
 function create_testimonial_cpt()
@@ -578,45 +580,45 @@ function create_testimonial_cpt()
 add_action('init', 'create_testimonial_cpt', 0);
 
 // team members custom post types
-function register_team_member_post_type()
-{
-    $labels = array(
-        'name' => __('Team Members', 'scalelabz.com'),
-        'singular_name' => __('Team Member', 'scalelabz.com'),
-        'menu_name' => __('Team Members', 'scalelabz.com'),
-        'name_admin_bar' => __('Team Member', 'scalelabz.com'),
-        'add_new' => __('Add New', 'scalelabz.com'),
-        'add_new_item' => __('Add New Team Member', 'scalelabz.com'),
-        'new_item' => __('New Team Member', 'scalelabz.com'),
-        'edit_item' => __('Edit Team Member', 'scalelabz.com'),
-        'view_item' => __('View Team Member', 'scalelabz.com'),
-        'all_items' => __('All Team Members', 'scalelabz.com'),
-        'search_items' => __('Search Team Members', 'scalelabz.com'),
-        'parent_item_colon' => __('Parent Team Members:', 'scalelabz.com'),
-        'not_found' => __('No team members found.', 'scalelabz.com'),
-        'not_found_in_trash' => __('No team members found in Trash.', 'scalelabz.com')
-    );
+// function register_team_member_post_type()
+// {
+//     $labels = array(
+//         'name' => __('Team Members', 'scalelabz.com'),
+//         'singular_name' => __('Team Member', 'scalelabz.com'),
+//         'menu_name' => __('Team Members', 'scalelabz.com'),
+//         'name_admin_bar' => __('Team Member', 'scalelabz.com'),
+//         'add_new' => __('Add New', 'scalelabz.com'),
+//         'add_new_item' => __('Add New Team Member', 'scalelabz.com'),
+//         'new_item' => __('New Team Member', 'scalelabz.com'),
+//         'edit_item' => __('Edit Team Member', 'scalelabz.com'),
+//         'view_item' => __('View Team Member', 'scalelabz.com'),
+//         'all_items' => __('All Team Members', 'scalelabz.com'),
+//         'search_items' => __('Search Team Members', 'scalelabz.com'),
+//         'parent_item_colon' => __('Parent Team Members:', 'scalelabz.com'),
+//         'not_found' => __('No team members found.', 'scalelabz.com'),
+//         'not_found_in_trash' => __('No team members found in Trash.', 'scalelabz.com')
+//     );
 
-    $args = array(
-        'labels' => $labels,
-        'description' => __('Description.', 'scalelabz.com'),
-        'public' => true,
-        'publicly_queryable' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'query_var' => true,
-        'rewrite' => array('slug' => 'team-member'),
-        'capability_type' => 'post',
-        'has_archive' => true,
-        'hierarchical' => false,
-        'menu_position' => null,
-        'supports' => array('title', 'editor', 'thumbnail'), // Adjust as needed
-        'menu_icon' => 'dashicons-groups', // Adjust as needed
-    );
+//     $args = array(
+//         'labels' => $labels,
+//         'description' => __('Description.', 'scalelabz.com'),
+//         'public' => true,
+//         'publicly_queryable' => true,
+//         'show_ui' => true,
+//         'show_in_menu' => true,
+//         'query_var' => true,
+//         'rewrite' => array('slug' => 'team-member'),
+//         'capability_type' => 'post',
+//         'has_archive' => true,
+//         'hierarchical' => false,
+//         'menu_position' => null,
+//         'supports' => array('title', 'editor', 'thumbnail'), // Adjust as needed
+//         'menu_icon' => 'dashicons-groups', // Adjust as needed
+//     );
 
-    register_post_type('team_member', $args);
-}
-add_action('init', 'register_team_member_post_type');
+//     register_post_type('team_member', $args);
+// }
+// add_action('init', 'register_team_member_post_type');
 
 
 function custom_login_logo()
@@ -649,3 +651,17 @@ function enqueue_fancybox() {
     wp_enqueue_script('fancybox-js', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js', array('jquery'), null, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_fancybox');
+
+
+function portfolio_template_override( $template ) {
+    // Check if the page is the portfolio page (ID 82) or the slug 'portfolio'
+    if ( is_page( 82 ) || is_page( 'portfolio' ) ) {
+        // Load the page-portfolio.php template
+        $new_template = locate_template( array( 'page-portfolio.php' ) );
+        if ( !empty( $new_template ) ) {
+            return $new_template;
+        }
+    }
+    return $template;
+}
+add_filter( 'template_include', 'portfolio_template_override' );

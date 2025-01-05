@@ -24,7 +24,7 @@ get_header();
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-5">
                     <div class="banner-img-two">
-                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/hero-banner-img.png"
+                        <img src="https://scalelabz.com/wp-content/uploads/2024/11/hero-banner-img.png"
                             alt="ScaleLabz hero banner image">
                     </div>
                 </div>
@@ -98,34 +98,34 @@ get_header();
             <div class="row brand-active">
                 <div class="col-12">
                     <div class="brand-item">
-                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/Logo.webp" alt="">
+                        <img src="https://scalelabz.com/wp-content/uploads/2024/11/Logo.webp" alt="">
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="brand-item">
-                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/ig-logo.png" alt="">
+                        <img src="https://scalelabz.com/wp-content/uploads/2024/11/ig-logo.png" alt="">
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="brand-item">
-                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/DSA-ecommerce-Logo.webp" alt="">
+                        <img src="https://scalelabz.com/wp-content/uploads/2024/11/DSA-ecommerce-Logo.webp" alt="">
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="brand-item">
-                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/b81dc46-852e-6d46-e2fa-f7d38c741e5_Beloved_Holistic_Logo.webp"
+                        <img src="https://scalelabz.com/wp-content/uploads/2024/11/b81dc46-852e-6d46-e2fa-f7d38c741e5_Beloved_Holistic_Logo.webp"
                             alt="">
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="brand-item">
-                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/64a842e615596fc6585c90db_b2b-rocket-logo-blue-cropped-p-500.png"
+                        <img src="https://scalelabz.com/wp-content/uploads/2024/11/64a842e615596fc6585c90db_b2b-rocket-logo-blue-cropped-p-500.png"
                             alt="">
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="brand-item">
-                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/8gzcr6RpGStvZFA2qRt4v6.jpg" alt="">
+                        <img src="https://scalelabz.com/wp-content/uploads/2024/11/8gzcr6RpGStvZFA2qRt4v6.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -301,8 +301,8 @@ get_header();
                             <ul class="list-wrap">
                                 <li>
                                     <div class="icon">
-                                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/DIALOGUE-BOX.png"
-                                            alt="">
+                                        <img src="https://scalelabz.com/wp-content/uploads/2024/11/DIALOGUE-BOX.png"
+                                            alt="Concept Creation">
                                     </div>
                                     <div class="content">
                                         <h4 class="title">Concept Creation</h4>
@@ -311,8 +311,8 @@ get_header();
                                 </li>
                                 <li>
                                     <div class="icon">
-                                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/PLAYLIST.png"
-                                            alt="">
+                                        <img src="https://scalelabz.com/wp-content/uploads/2024/11/PLAYLIST.png"
+                                            alt="Receiving and Verifying Footage">
                                     </div>
                                     <div class="content">
                                         <h4 class="title">Receiving and Verifying Footage </h4>
@@ -322,8 +322,8 @@ get_header();
                                 </li>
                                 <li>
                                     <div class="icon">
-                                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/FILM-EDITOR.png"
-                                            alt="">
+                                        <img src="https://scalelabz.com/wp-content/uploads/2024/11/FILM-EDITOR.png"
+                                            alt="Editing and Quality Check">
                                     </div>
                                     <div class="content">
                                         <h4 class="title">Editing and Quality Check</h4>
@@ -334,8 +334,8 @@ get_header();
                                 </li>
                                 <li>
                                     <div class="icon">
-                                        <img src="https://scalelabz.com/wp-content/uploads/2024/07/4K-FILM.png"
-                                            alt="">
+                                        <img src="https://scalelabz.com/wp-content/uploads/2024/11/4K-FILM.png"
+                                            alt="Final Design and Submission">
                                     </div>
                                     <div class="content">
                                         <h4 class="title">Final Design and Submission</h4>

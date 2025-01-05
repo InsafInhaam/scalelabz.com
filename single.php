@@ -1,11 +1,7 @@
 <?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package codexlab
- */
+if ( is_single() ) {
+    echo '<h1>single.php is being used</h1>';
+}
 
 get_header();
 ?>

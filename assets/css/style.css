@@ -1069,7 +1069,7 @@ label {
 	font-size: 78px;
 	margin-bottom: 45px;
 	line-height: 1;
-	color: var(--tg-banner-title-color);
+	color: #fff;
 }
 .breadcrumb-content .breadcrumb {
 	display: inline-flex;

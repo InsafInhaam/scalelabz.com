@@ -1,142 +1,158 @@
 <?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package codexlab
- */
 
 get_header();
 ?>
 
-<main id="primary" class="site-main">
-
-	<!-- banner -->
-	<div class="mil-inner-banner mil-p-0-120">
-		<div class="mil-banner-content mil-up">
-			<div class="mil-animation-frame">
-				<div class="mil-animation mil-position-4 mil-dark mil-scale" data-value-1="6" data-value-2="1.4"></div>
-			</div>
-			<div class="container">
-				<ul class="mil-breadcrumbs mil-mb-60">
-                <li><a href="<?php echo esc_url(home_url('/')); ?>">Homepage</a></li>
-                <li><a href="<?php echo esc_url(get_post_type_archive_link('post')); ?>">Blog</a></li>
-                <li><a href="<?php echo esc_url(home_url('/')); ?>category/<?php echo esc_attr(get_query_var('category_name')); ?>"><?php single_cat_title(); ?></a></li>
-				</ul>
-				<h1 class="mil-mb-60"><?php single_cat_title(); ?> <br> <span class="mil-thin">Blogs</span></h1>
-				<a href="#blog" class="mil-link mil-dark mil-arrow-place mil-down-arrow">
-					<span>Publications</span>
-				</a>
+<!-- breadcrumb-area -->
+<section class="breadcrumb-area breadcrumb-area-two pt-175">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="breadcrumb-content">
+					<h2 class="title">Portfolio Details</h2>
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Portfolio Details</li>
+						</ol>
+					</nav>
+				</div>
 			</div>
 		</div>
 	</div>
-	<!-- banner end -->
+</section>
+<!-- breadcrumb-area-end -->
 
-	<!-- blog -->
-	<section id="blog">
-		<div class="container mil-p-120-120">
-			<div class="row align-items-center mil-mb-30">
-				<div class="col-lg-4 mil-mb-30">
-					<h3 class="mil-up">Categories:</h3>
+<!-- portfolio -->
+<style>
+	.project-asrea-three {
+		padding: 60px 0px;
+	}
+
+	.project-area-three .row {
+		flex-wrap: wrap !important;
+	}
+
+	.project-area-three iframe {
+		width: 100%;
+		height: 200px;
+	}
+
+	.project-area-three iframe img {
+		object-fit: contain;
+	}
+
+	.project-area-three .project-item-three {
+		/* width: 33.3333%; */
+		/* float: left; */
+		box-sizing: border-box;
+		padding: 30px 30px 0px;
+	}
+
+	.more-videos-btn {
+		text-align: center;
+		margin-top: 30px;
+	}
+
+	.project-items-wrap {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+
+	/* .project-item-three {
+		width: 32%;
+		margin: 0 10px;
+	} */
+</style>
+
+<section class="project-asrea-three" id="portfolio">
+	<div class="container">
+		<!-- <div class="row justify-content-end">
+			<div class="col-xl-10">
+				<div class="section-title title-style-two mb-90">
+					<span class="sub-title"><?php _e('Our Project', 'scalelabz.com'); ?></span>
+					<h2 class="title"><?php _e('Creative work.', 'scalelabz.com'); ?></h2>
 				</div>
-				<div class="col-lg-8 mil-mb-30">
-					<div class="mil-adaptive-right mil-up">
-						<ul class="mil-category-list">
-							<?php
-							// Get all categories
-							$categories = get_categories();
-
-							// Display each category as a filter link
-							foreach ($categories as $category) {
-								printf(
-									'<li><a href="%1$s" %2$s>%3$s</a></li>',
-									esc_url(get_category_link($category->term_id)),
-									is_category($category->term_id) ? 'class="mil-active"' : '',
-									esc_html($category->name)
+			</div>
+		</div> -->
+		<div class="project-nav-wrap">
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="tab-content" id="myTabContent">
+						<div class="tab-pane fade show active" id="website" role="tabpanel"
+							aria-labelledby="website-tab">
+							<div class="project-items-wrap">
+								<?php
+								$args = array(
+									'post_type' => 'portfolio',
+									'posts_per_page' => -1 // Only show 3 items
 								);
-							}
-							?>
-						</ul>
+								$portfolio_query = new WP_Query($args);
+								if ($portfolio_query->have_posts()):
+									while ($portfolio_query->have_posts()):
+										$portfolio_query->the_post();
+										$portfolio_title = get_the_title();
+										$portfolio_video_url = get_field('video_url');
+										$portfolio_thumbnail = get_field('video_thumbnail');
+										$portfolio_description = get_field('video_description');
+										?>
+										<div class="project-item-three">
+											<div class="project-content-three">
+												<h2 class="title"><?php echo esc_html($portfolio_title); ?></h2>
+												<p><?php echo esc_html($portfolio_description); ?></p>
+											</div>
+											<div class="project-thumb-three">
+												<?php if ($portfolio_video_url): ?>
+													<a data-fancybox="gallery" href="<?php echo esc_url($portfolio_video_url); ?>">
+														<img src="<?php echo esc_url($portfolio_thumbnail['url']); ?>"
+															alt="<?php echo esc_attr($portfolio_title); ?>">
+													</a>
+												<?php else: ?>
+													<img src="<?php echo get_template_directory_uri(); ?>/assets/img/project/h3_project_img01.jpg"
+														alt="">
+												<?php endif; ?>
+											</div>
+										</div>
+										<?php
+									endwhile;
+									wp_reset_postdata();
+								else:
+									echo '<p>' . __('No portfolios found', 'scalelabz.com') . '</p>';
+								endif;
+								?>
+							</div>
+						</div>
+						<!-- Repeat the above block for other tabs: design, app, branding -->
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<?php
-				// Define custom query parameters
-				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				$category_slug = get_query_var('category_name'); 
-				$args = array(
-					'post_type' => 'post',
-					'posts_per_page' => 6, // Adjust the number of posts per page as needed
-					'paged' => $paged,
-					'category_name'  => $category_slug,
-				);
 
-				// Create custom query
-				$blog_query = new WP_Query($args);
-
-				// Loop through posts
-				if ($blog_query->have_posts()):
-					while ($blog_query->have_posts()):
-						$blog_query->the_post();
-						?>
-						<div class="col-lg-12">
-							<a href="<?php the_permalink(); ?>" class="mil-blog-card mil-blog-card-hori mil-more mil-mb-60">
-								<div class="mil-cover-frame mil-up">
-									<?php if (has_post_thumbnail()): ?>
-										<img src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'large')); ?>"
-											alt="<?php the_title_attribute(); ?>">
-									<?php endif; ?>
-								</div>
-								<div class="mil-post-descr">
-									<div class="mil-labels mil-up mil-mb-30">
-										<div class="mil-label mil-upper mil-accent">
-											<?php echo esc_html(get_the_category()[0]->name); ?>
-										</div>
-										<div class="mil-label mil-upper"><?php echo esc_html(get_the_date('M j, Y')); ?></div>
-									</div>
-									<h4 class="mil-up mil-mb-30"><?php the_title(); ?></h4>
-									<p class="mil-post-text mil-up mil-mb-30">
-										<?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?>
-									</p>
-									<div class="mil-link mil-dark mil-arrow-place mil-up">
-										<span>Read more</span>
-									</div>
-								</div>
-							</a>
-						</div>
-						<?php
-					endwhile;
-
-					// Add pagination links
-					echo '<div class="mil-pagination">';
-					echo paginate_links(
-						array(
-							'total' => $blog_query->max_num_pages,
-							'current' => max(1, get_query_var('paged')),
-						)
-					);
-					echo '</div>';
-
-					// Reset post data
-					wp_reset_postdata();
-				else:
-					// No posts found
-					echo 'No posts found.';
-				endif;
-				?>
 			</div>
 		</div>
-	</section>
-	<!-- blog end -->
+	</div>
+	<div class="project-shape-wrap-two">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/images/h3_project_shape.png" alt="">
+	</div>
+</section>
 
-</main><!-- #main -->
+<script>
+	jQuery(document).ready(function ($) {
+		$('[data-fancybox="gallery"]').fancybox({
+			buttons: [
+				'slideShow',
+				'share',
+				'zoom',
+				'fullScreen',
+				'close'
+			],
+			youtube: {
+				controls: 0,
+				showinfo: 0
+			}
+		});
+	});
+</script>
+<!-- portfolio end -->
 
 <?php
 get_footer();

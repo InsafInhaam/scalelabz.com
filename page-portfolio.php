@@ -1,20 +1,10 @@
 <?php
 /**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package codexlab
+ * Template Name: Portfolio
  */
 
 get_header();
 ?>
-
 
 <!-- banner -->
 <div class="mil-inner-banner">
@@ -99,7 +89,7 @@ get_header();
                                 <?php
                                 $args = array(
                                     'post_type' => 'portfolio',
-                                    'posts_per_page' => 3 // Only show 3 items
+                                    'posts_per_page' => -1 // Only show 3 items
                                 );
                                 $portfolio_query = new WP_Query($args);
                                 if ($portfolio_query->have_posts()):
@@ -171,13 +161,11 @@ get_header();
         });
     });
 </script>
-
 <!-- portfolio end -->
 
 <?php
 include get_template_directory() . '/template-parts/call-to-action.php';
 ?>
-
 
 <?php
 get_footer();

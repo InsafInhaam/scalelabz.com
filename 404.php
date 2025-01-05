@@ -10,38 +10,73 @@
 get_header();
 ?>
 
+<style>
+	.not-found-page-container {
+		text-align: center;
+		margin-top: 100px;
+	}
+
+	.not-found-page-container h1 {
+		font-size: 8rem;
+		font-weight: bold;
+		color: #4d69e9;
+	}
+
+	.not-found-page-container h2 {
+		font-size: 2rem;
+		margin-bottom: 20px;
+		color: #fff;
+	}
+
+	.not-found-page-container p {
+		font-size: 1.2rem;
+		color: #777;
+	}
+
+	.not-found-page-container .btn {
+		display: inline-block;
+		margin-top: 30px;
+		padding: 10px 25px;
+		font-size: 1rem;
+		background-color: #ff6b6b;
+		color: #fff;
+		text-decoration: none;
+		border-radius: 5px;
+		transition: background-color 0.3s ease;
+	}
+
+	.not-found-page-container .btn:hover {
+		background-color: #4d69e9;
+	}
+
+	.not-found-page-container .animation {
+		animation: float 2s infinite ease-in-out;
+	}
+
+	@keyframes float {
+
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+
+		50% {
+			transform: translateY(-20px);
+		}
+	}
+</style>
 <main id="primary" class="site-main">
 	<!-- 404 -->
-	<div class="mil-404-banner mil-dark-bg">
-		<div class="mil-animation-frame">
-			<div class="mil-animation mil-position-4 mil-scale" data-value-1="9" data-value-2="1.4" style="right: 40%;">
-			</div>
-		</div>
-		<div class="mi-invert-fix mil-up">
-			<div class="container">
-				<div class="mil-404-frame">
-
-					<div class="mil-scale-frame">
-
-						<h1 class="mil-404" data-text="404">404</h1>
-
-					</div>
-
-					<h4 class="mil-404-text mil-dark mil-mb-20">
-						<?php esc_html_e('Oops! That page can&rsquo;t be found.', 'codexlab'); ?>
-					</h4>
-					<p class="mil-404-text mil-mb-60"><?php esc_html_e('It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'codexlab'); ?>
-					</p>
-					<a href="/" class="mil-button mil-arrow-place">
-						<span>Back to homepage</span>
-					</a>
-				</div>
-
-			</div>
-		</div>
+	<div class="not-found-page-container">
+		<h1 class="animation">404</h1>
+		<h2>Oops! Page Not Found</h2>
+		<p>The page you are looking for does not exist or has been moved.</p>
+		<a href="/" class="btn">Go Back Home</a>
 	</div>
+
 	<!-- 404 end -->
-</main><!-- #main -->
+</main>
+<!-- #main -->
 
 <?php
 get_footer();
